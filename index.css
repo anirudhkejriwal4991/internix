@@ -512,9 +512,6 @@ hr{
     }
 }
 
-
-
-
 .new_footer_area {
     background: #ebebeb;
 }
@@ -682,3 +679,207 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    /* Adjust header styles */
+    .header__logo {
+        margin-left: 1rem;
+        font-size: 20px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    /* Adjust banner styles */
+    .banner {
+        height: 400px;
+        margin-top: 6rem;
+    }
+
+    .banner__content h1 {
+        font-size: 32px; /* Decrease heading font size for smaller screens */
+        padding-right: 1rem; /* Decrease right padding for heading */
+    }
+
+    .banner__content p {
+        font-size: 16px; 
+        padding-right: 1rem; 
+    }
+
+    .banner_img img {
+        display: none;
+    }
+
+    .header__menu ul li {
+        margin-left: 10px;
+    }
+
+    .banner__content button {
+        font-size: 16px; 
+    }
+
+    .cards {
+        top: auto;
+        padding: 20px 0;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 350px;
+        margin: 20px auto;
+    }
+
+    .card img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .card h4 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .card p, .card ul {
+        font-size: 14px;
+    }
+
+    .card ul {
+        margin-top: 10px;
+        margin-left: 1rem;
+    }
+
+    .Internships {
+        margin-top: 48rem;
+    }
+
+    .search-box {
+        max-width: 80%;
+    }
+
+    .search-box input[type="text"] {
+        padding: 10px;
+    }
+
+    .search-box button {
+        padding: 10px 15px;
+        margin-left: 0.3rem;
+    }
+
+    .Internships-card .card {
+        width: 95%;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    .Internships-card .card h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .Internships-card .card p {
+        font-size: 16px;
+    }
+
+    .apply-button {
+        margin-top: 2rem;
+    }
+
+    .process {
+        margin-top: 2rem;
+    }
+
+    .process-cards {
+        flex-direction: column;
+        height: auto;
+        margin: 0 1rem;
+    }
+
+    .process-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px 0;
+    }
+
+    .process-card::before {
+        top: -30px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .process-card img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .process-card h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .process-card .custom-list li {
+        padding-left: 25px;
+        background-size: 15px;
+    }
+
+    .about {
+        display: block;
+        padding: 50px 0;
+    }
+
+    .about__content {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .about__content h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .about__content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .about__img img {
+        height: auto;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .features {
+        padding-top: 3rem;
+    }
+
+    .features__content h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .features__content p {
+        font-size: 16px;
+    }
+
+    .Disables {
+        display: block;
+        padding: 50px 0;
+    }
+
+    .disable-img {
+        height: auto;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    hr {
+        width: 50%; 
+        margin: 0 auto;
+        margin-bottom: 1rem; 
+}
+
+.f_social_icon a{
+    margin-left: 5.5rem;
+}
+}
