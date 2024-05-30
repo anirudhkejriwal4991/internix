@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://themify.me/wp-content/themes/themify-v32/themify-icons/themify-icons.css">
     <meta property="og:title" content="InterniX Technology">
-    <meta property="og:description" content="Discover internships tailored to your interests and kickstart your career journey today.">
-    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/katarastores-78cad.appspot.com/o/logo.png?alt=media&token=ee65059c-1a28-4d2d-89e9-5969d5b27b8e">
+    <meta property="og:description"
+        content="Discover internships tailored to your interests and kickstart your career journey today.">
+    <meta property="og:image"
+        content="https://firebasestorage.googleapis.com/v0/b/katarastores-78cad.appspot.com/o/logo.png?alt=media&token=ee65059c-1a28-4d2d-89e9-5969d5b27b8e">
     <meta property="og:url" content="https://internix.tech">
     <meta name="twitter:title" content="InterniX Technology">
-    <meta name="twitter:description" content="Discover internships tailored to your interests and kickstart your career journey today.">
-    
+    <meta name="twitter:description"
+        content="Discover internships tailored to your interests and kickstart your career journey today.">
+
     <!-- Other meta tags -->
     <meta name="description" content="InterniX Technology - Explore Exciting Internship Opportunities">
     <meta name="keywords" content="internships, career, technology">
@@ -29,14 +32,15 @@
     <meta name="distribution" content="global">
     <meta name="web_author" content="InterniX Technology">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/katarastores-78cad.appspot.com/o/Screenshot%202024-01-31%20184433.png?alt=media&token=e691ca59-d612-4e41-afcf-0f4950c0c535">
+    <link rel="icon"
+        href="https://firebasestorage.googleapis.com/v0/b/katarastores-78cad.appspot.com/o/Screenshot%202024-01-31%20184433.png?alt=media&token=e691ca59-d612-4e41-afcf-0f4950c0c535">
 </head>
 
 <body>
     <header>
         <div class="header">
             <div class="header__logo">
-               <!-- <a href="index.html"><h3>Interni<span>X</span> Technology</h3></a>  -->
+                <!-- <a href="index.html"><h3>Interni<span>X</span> Technology</h3></a>  -->
                 <a href="index.html"><img src="3d1/logo.png" alt="" width="200px"></a>
             </div>
             <div class="header__menu">
@@ -124,13 +128,14 @@
         </div>
         <div class="card">
             <h4>Cloud Computing</h4>
-            <p>Learn how to develop and implement cloud computing solutions to solve real-world problems in a variety of fields.</p>
+            <p>Learn how to develop and implement cloud computing solutions to solve real-world problems in a variety of
+                fields.</p>
             <button class="apply-button" onclick="applyNow()">Apply Now</button>
         </div>
         <div class="card">
             <h4>Artificial Intelligence</h4>
             <p>Learn how to develop and implement AI solutions to solve real-world problems in a variety of fields.</p>
-                <button class="apply-button" onclick="applyNow()">Apply Now</button>
+            <button class="apply-button" onclick="applyNow()">Apply Now</button>
         </div>
         <div class="card">
             <h4>Machine Learning</h4>
@@ -139,12 +144,14 @@
         </div>
         <div class="card">
             <h4>Data Science</h4>
-            <p>Learn how to develop and implement data science solutions to solve real-world problems in a variety of fields.</p>
+            <p>Learn how to develop and implement data science solutions to solve real-world problems in a variety of
+                fields.</p>
             <button class="apply-button" onclick="applyNow()">Apply Now</button>
         </div>
         <div class="card">
             <h4>UI/UX Design</h4>
-            <p>Learn how to develop and implement UI/UX solutions to solve real-world problems in a variety of fields.</p>
+            <p>Learn how to develop and implement UI/UX solutions to solve real-world problems in a variety of fields.
+            </p>
             <button class="apply-button" onclick="applyNow()">Apply Now</button>
         </div>
         <div class="card">
@@ -243,14 +250,15 @@
         <div class="features__content">
             <h1>Trusted by</h1>
             <br>
-            <p>Our programs boast an array of prestigious certifications, including MCA and MSME certifications, attesting to our commitment to quality and excellence in the tech sector.</p>
+            <p>Our programs boast an array of prestigious certifications, including MCA and MSME certifications,
+                attesting to our commitment to quality and excellence in the tech sector.</p>
         </div>
         <br>
         <section class="Disables">
             <div class="disable-img">
                 <img src="3d1/accrediations-msme.png" alt="" width="250px">
             </div>
-            </section>
+        </section>
     </section>
 
     <!-- Contact  -->
@@ -280,12 +288,29 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
+            const options = {
+                timeZone: 'Asia/Kolkata',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+
+            const currentDate = new Date();
+            const formatter = new Intl.DateTimeFormat('en-GB', options);
+            const [{ value: day }, , { value: month }, , { value: year }, , { value: hour }, , { value: minute }, , { value: second }] = formatter.formatToParts(currentDate);
+
+            const formattedDate = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
 
             // Construct the data object
             const data = {
                 Name: name,
                 Email: email,
-                Message: message
+                Message: message,
+                Time: formattedDate
             };
             // Make a POST request to the Sheet's API endpoint
             fetch('https://sheet.best/api/sheets/615a34c3-1f7f-4cf5-be9a-27e1e4a078b5', {
@@ -303,7 +328,7 @@
                     console.error('Error sending data:', error);
                     alert('An error occurred while sending the message. Please try again later.');
                 });
-                document.getElementById('contactForm').reset();
+            document.getElementById('contactForm').reset();
         });
     </script>
     <footer class="new_footer_area bg_color">
