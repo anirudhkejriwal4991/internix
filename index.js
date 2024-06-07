@@ -69,5 +69,5 @@ document.querySelector('.search-box input[type="text"]').addEventListener('input
 
 function applyNow(){
     // open the link 
-    window.open("https://forms.gle/jacdejq1ymPrzZWE7", "_blank");
+    window.open("https://forms.gle/PmHP4UXnwezAmM81A", "_blank");
 }
